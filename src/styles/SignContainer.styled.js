@@ -1,8 +1,30 @@
 import styled from "styled-components";
 
-const SignInForm = styled.form`
+const SignInBox = styled.div`
     width: 100%;
     height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    .bottom-signup {
+        font-size: 14px;
+        display: flex;
+        gap: 10px;
+        margin-top: 130px;
+    }
+    .signupBtn {
+        color: #FFA800;
+        text-decoration: underline;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+`
+
+const SignInForm = styled.form`
     background-color: #f8f8f8;
     display: flex;
     align-items: center;
@@ -28,19 +50,15 @@ const SignInForm = styled.form`
         box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.1);
         margin-top: 16px;    
     }
-    .bottom-signup {
-        font-size: 14px;
-        display: flex;
-        gap: 10px;
-        margin-top: 130px;
-    }
-    .signupBtn {
-        color: #FFA800;
-        text-decoration: underline;
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-    }
 `;
 
-export {SignInForm};
+const SignUpForm = styled.form`
+    width: 100%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+`
+
+export {SignInBox, SignInForm, SignUpForm};

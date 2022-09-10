@@ -1,3 +1,3 @@
-import { SignInPage } from "./Auth";
+import { SignInPage, RegisterPage } from "./Auth";
 
-export { SignInPage };
+export { SignInPage, RegisterPage };
