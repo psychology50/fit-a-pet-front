@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
-import {SignInPage, RegisterPage} from './pages';
+import {SignInPage, RegisterPage, Main} from './pages';
 
 import TotalContainer from './styles/TotalContainer.styled';
 
@@ -11,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<SignInPage />}/>
           <Route path="/register" element={<RegisterPage />}/>
-          {/* <Route path="/" element={<Main />} /> */}
+          <Route path="/" element={<Main />} />
           {/* <Route path="/*" element={}/> */}
         </Routes>
       </TotalContainer>

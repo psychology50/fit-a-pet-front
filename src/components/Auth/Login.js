@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axiosInstance from "apis/axios";
 import {useNavigate} from 'react-router-dom';
 import { SignInForm } from "styles/SignContainer.styled";
+import { useEffect } from "react";
 
 const Login = () => {
     const initData = Object.freeze({
@@ -12,16 +13,18 @@ const Login = () => {
     const [color, updateColor] = useState("#a6a6a6")
     const navigate = useNavigate();
 
-    const handleChange = e => {
-        updateData({
-            ...data, [e.target.name]: e.target.value.trim()
-        })
-
-        if (data.nickname.length >= 2 && data.password.length >= 2) {
+    useEffect(() => {
+        if (data.nickname.length > 0 && data.password.length > 0) {
             updateColor("#FFA800");
         } else {
             updateColor("#A6A6A6")
         }
+    }, [data])
+
+    const handleChange = e => {
+        updateData({
+            ...data, [e.target.name]: e.target.value.trim()
+        })
     }
 
     const handleSubmit = e => {

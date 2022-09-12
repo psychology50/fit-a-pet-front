@@ -53,12 +53,53 @@ const SignInForm = styled.form`
 `;
 
 const SignUpForm = styled.form`
-    width: 100%;
-    height: 100vh;
-    background-color: #f8f8f8;
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    align-items: center;
+    padding-top: 60px;
+    padding-bottom: 56px;
+    .typeIn {
+        width: 295px;
+        input {
+            border: none;
+            width: 291px;
+            height: 46px;
+            border-radius: 5px;
+        }
+        .overlapInput {
+            width: 225px;
+        }
+    }
+    .inputTitle {
+        font-size: 14px;
+        margin-bottm: 5px;
+    }
+    .overlapBtn {
+        width: 62px;
+        height 46px;
+        font-size: 12px;
+        font-weight: 700;
+        border-radius: 5px;
+        color: #ffffff;
+        border: none;
+        margin-left: 3px;
+        box-shadow: 0px 2px 12px -3px rgba(0, 0, 0, 0.1);
+    }
+    .nickInput {
+        background-color: ${(props) => props.nickColor || "#A6A6A6"};
+    }
+    .emailInput {
+        background-color: ${(props) => props.emailColor || "#A6A6A6"};
+    }
+    .phonNumber {
+        display: flex;
+        width: 295px;
+        gap: 8px;
+        input {
+            width: 100%;
+        }
+    }
+    
 `
 
 export {SignInBox, SignInForm, SignUpForm};
