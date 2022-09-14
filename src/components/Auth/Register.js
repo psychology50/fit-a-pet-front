@@ -12,7 +12,6 @@ const OverlapCheckBtn = (props) => {
                 value: props.value
             })
             .then((res) => {
-                // 유효하면 alert(유효)
             })
     }
 

@@ -15,7 +15,7 @@ const TotalCycle = () => {
                 updateValid(true);
             })
             .catch((err) => {
-                console.log(err)
+                // console.log(err)
             })
     })
 
